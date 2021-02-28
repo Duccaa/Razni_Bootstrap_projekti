@@ -1,0 +1,173 @@
+:root {
+    --blue: #49bfff;
+    --white: #fff;
+    --gray: #333;
+    --transition: .4s ease;
+}
+body {
+    font-size: 17px;
+}
+.bg-light {
+    background: var(--blue) !important;
+}
+.btn {
+    border-radius: 0;
+}
+.btn-outline-primary {
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+.btn-outline-primary:hover {
+    border: 2px solid var(--white);
+    color: var(--gray);
+    background: var(--white);
+}
+/*nav*/
+.navbar {
+    padding: 10px 100px;
+}
+.nav-link {
+    color: var(--white) !important;
+}
+.nav-link:hover {
+    color: var(--gray) !important;
+    transition: var(--transition);
+}
+.navbar-light .navbar-nav .active > .nav-link, 
+.navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .nav-link.show, 
+.navbar-light .navbar-nav .show > .nav-link {
+    color: var(--gray) !important;
+}
+.navbar-brand {
+    color: var(--white) !important;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.navbar-brand:hover {
+    color: #f0f0f0 !important;
+    text-shadow: 0 0 2px var(--gray);
+    transition: var(--transition);
+}
+/* slider */
+.carousel-caption {
+    bottom: 25%;
+    text-align: left;
+}
+/* counter */
+.counter i {
+    color: var(--blue);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+/* plan */
+.plan .icons {
+    width: 70px;
+    height:70px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    line-height: 70px;
+    background: var(--white);
+    margin: auto;
+    border-radius: 50%;
+    color: var(--blue);
+    font-size: 1.7rem;
+}
+/* packages */
+.packages .tag {
+    padding: 5px;
+    right: 20px;
+    bottom: 5px;
+}
+.packages .card-body i {
+    color: var(--blue);
+}
+/* enjoy the trip */
+.jumbotron {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(img/slide-palms.jpg);
+    padding: 150px 0;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* destinations */
+.destinations .stars {
+    top: 50px;
+    right: 30px;
+}
+/* footer */
+footer a:hover {
+    color: var(--white) !important;
+    text-decoration: none;
+    transition: var(--transition);
+}
+footer input {
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px lightgray;
+    padding: 5px;
+}
+.fa-paper-plane {
+    right: 30px;
+}
+.fa-paper-plane:hover {
+    color: var(--white) !important;
+    transition: var(--transition); 
+}
+/* responsive */
+@media(max-width: 385px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .navbar-toggler {
+        padding: .2rem .5rem;
+        font-size: 1rem;
+    }
+    .intro h2 {
+        font-size: 1.3rem;
+        margin-top: 15px;
+    }
+    .plan h2 {
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+    .jumbotron {
+        padding: 50px 0;
+    }
+}
+@media(max-width: 767px) {
+    .navbar {
+        padding: 10px;
+    }
+    footer input {
+        margin-bottom: 10px;
+    }
+    footer img {
+        margin-bottom: 10px;
+    }
+}
+@media(min-width: 768px) and (max-width: 1199px) {
+    .fa-paper-plane {
+        left: 170px;
+        bottom: 30px;
+    }
+}
+@media(max-width: 1000px) {
+    #carouselExampleCaptions {
+        margin-top: 50px;
+    }
+    .carousel-caption h5 {
+        font-size: 3rem;
+    } 
+}
+@media(min-width: 640px) and (max-width: 767px){
+    .carousel-caption {
+        display: block !important;
+        bottom: 10%;
+    } 
+    .carousel-caption h5 {
+        font-size: 2rem;
+    } 
+}
