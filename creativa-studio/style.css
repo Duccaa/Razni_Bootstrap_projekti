@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700|Poppins&display=swap");
+:root {
+    --gray: #3A4454;  /*rgb(58, 68, 84)*/
+    --cream: #f5dddd;
+    --violet: #6B4E71; /* rgb(107, 78, 113)*/
+    --white: #fff;
+    --black: #000;
+    --lightgray: #b3b3b3;
+    --fontSize: 16px;
+    --headerFont: "Josefin Sans", serif;
+    --textFont: "Poppins", sans-serif;
+}
+/*************************
+Basic styles
+*************************/
+body {
+  font-family: var(--textFont);
+  font-size: var(--fontSize);
+  padding-top: 69px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--headerFont);
+}
+.bg-light {
+  background: rgba(245, 221, 221, .8) !important;
+}
+hr {
+  border: none;
+  background: var(--violet);
+  width: 10%;
+  height: 3px;
+  margin: auto; 
+}
+/* nav */
+.navbar-brand {
+  font-size: 2rem;
+  font-family: var(--headerFont);
+  letter-spacing: 2px;
+  color: var(--violet) !important;
+}
+.navbar-nav .nav-item.active .nav-link {
+  color: var(--cream);
+  background: var(--violet);
+}
+/* headers */
+.headerHome {
+  background-image: linear-gradient(rgba(107, 78, 113, .8), rgb(255,255,255)), url(img/header-background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.headerContact{
+  height: 80vh;
+  background: linear-gradient(rgba(107, 78, 113, .7), rgba(255,255,255)), url(img/novisad.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.headerContact .container {
+  height: 100%;
+} 
+/* services*/
+.services hr,
+.card hr {
+  width: 30%;
+}
+.services img {
+  width: 80%;
+}
+/* skills */
+.skills {
+  background: linear-gradient(rgba(58, 68, 84, .8), rgba(58, 68, 84, .8)), url(img/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.skills h2 span {
+  color: var(--cream);
+  text-shadow: 0 0 5px var(--black);
+}
+.skills li:before {
+  content: ">_";
+  font-weight: bold;
+}
+.skills .fa-laptop-code {
+  font-size: 10rem;
+  text-shadow: 0 0 25px var(--black);
+} 
+/* technologies */
+.technologies .card {
+  border: 1px solid var(--violet);
+  box-shadow: 0 0 25px var(--lightgray);
+}
+.technologies .card .holder {
+   overflow: hidden; 
+}
+.technologies .card img {
+  transition: transform 2s ease;
+}
+.technologies .card img:hover {
+  transform: scale(1.2);
+}
+/* contact */
+.contact i {
+  color: var(--violet);
+  font-size: 1.5rem;
+}
+/* footer */
+footer i {
+  font-size: 2rem;
+  color: var(--violet);
+  padding: .4rem;
+  transition: transform .9s ease-out, font-size .9s ease-out;
+}
+footer i:hover{
+  transform: rotate(360deg);
+  font-size: 1.6rem;
+}
+/* responsive */
+@media(max-width: 278px) {
+  .navbar-brand {
+    font-size: 1.8rem;
+  }
+  .navbar-toggler {
+      padding: .25rem .55rem;
+      font-size: 1.2rem;
+  }
+}
+@media(max-width: 360px) {
+  .headerHome h1 {
+    font-size: 2.5rem;
+  }
+} 
+@media(max-width: 991px) {
+  .navbar-nav .nav-item.active .nav-link {
+    background: transparent;
+    color: var(--violet);
+    font-weight: 700;
+  }
+} 
+@media(max-height: 450px) {
+  .headerHome {
+    height: auto;
+  }
+  .headerHome h1 {
+    margin-top: 40px;
+  }
+}
